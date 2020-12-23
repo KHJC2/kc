@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sads sap" x:Class="活动"
+﻿<Activity mc:Ignorable="sads sap" x:Class="活动" sap:VirtualizedContainerService.HintSize="440,440" mva:VisualBasic.Settings="Assembly references and imported namespaces for internal implementation"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System"
@@ -20,51 +20,12 @@
  xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
  xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
  xmlns:st="clr-namespace:System.Text;assembly=mscorlib"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="AA" Type="InArgument(x:String)" />
-    <x:Property Name="bb" Type="InArgument(x:String)" />
-  </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1495,1462</sap:VirtualizedContainerService.HintSize>
-  <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:壳="clr-namespace:壳尘">
   <sap:WorkflowViewStateService.ViewState>
     <scg3:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg3:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sad:XamlDebuggerXmlReader.FileName="G:\Users\1\source\repos\壳尘\壳尘\Activity1.xaml" sap:VirtualizedContainerService.HintSize="1455,1382">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="variable1" />
-      <Variable x:TypeArguments="x:String" Default="544" Name="variable2" />
-    </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg3:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1433,61">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[AA]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["55"]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Parallel sap:VirtualizedContainerService.HintSize="1433,271">
-      <ForEach x:TypeArguments="x:Int32" sap:VirtualizedContainerService.HintSize="291,225">
-        <ActivityAction x:TypeArguments="x:Int32">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Int32" Name="item" />
-          </ActivityAction.Argument>
-        </ActivityAction>
-      </ForEach>
-      <Switch x:TypeArguments="x:Int32" sap:VirtualizedContainerService.HintSize="484,225" />
-      <If sap:VirtualizedContainerService.HintSize="464,225" />
-    </Parallel>
-    <WriteLine sap:VirtualizedContainerService.HintSize="1433,63" Text="[AA]" />
-    <While sap:VirtualizedContainerService.HintSize="1433,223" />
-    <DoWhile sap:VirtualizedContainerService.HintSize="1433,227" />
-    <If Condition="[AA = &quot;aaa&quot;]" sap:VirtualizedContainerService.HintSize="1433,213" />
-  </Sequence>
 </Activity>

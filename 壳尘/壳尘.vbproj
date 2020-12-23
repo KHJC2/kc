@@ -134,14 +134,8 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Service1.xamlx">
-      <SubType>Designer</SubType>
-    </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="接口\" />
-    <Folder Include="类型\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <XamlAppDef Include="Activity1.xaml">
       <Generator>MSBuild:Compile</Generator>

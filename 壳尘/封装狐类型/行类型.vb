@@ -10,11 +10,9 @@ Imports Foxtable
 
 <DefaultMember("Item")>
 Public Class 行类型
-
     Public Sub New(狐行参数 As Foxtable.Row)
         Me.狐行 = 狐行参数
     End Sub
-
     Public Property Checked As Boolean
         Get
             Return 狐行.Checked
@@ -23,7 +21,6 @@ Public Class 行类型
             狐行.Checked = Value
         End Set
     End Property
-
     Public ReadOnly Property DataRow As DataRow
         Get
             Return 狐行.DataRow

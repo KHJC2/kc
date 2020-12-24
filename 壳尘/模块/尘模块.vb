@@ -1,3 +1,3 @@
-﻿Module 尘模块
+﻿Friend Module 尘模块
 
 End Module

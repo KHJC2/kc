@@ -10,8 +10,9 @@
     <AssemblyName>壳尘</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>壳尘.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +33,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>壳尘.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -52,9 +55,6 @@
     </Reference>
     <Reference Include="Foxtable.Lib">
       <HintPath>C:\foxtable\Trial\Foxtable.Lib.dll</HintPath>
-    </Reference>
-    <Reference Include="Foxtable.WeChat">
-      <HintPath>C:\foxtable\Trial\Foxtable.WeChat.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
@@ -81,12 +81,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ft20200811DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ft20200811DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="模块\壳模块.vb" />
     <Compile Include="模块\尘模块.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -112,6 +118,10 @@
     <Compile Include="封装狐类型\表类型.vb" />
     <Compile Include="封装狐模块\表模块.vb" />
     <Compile Include="封装狐模块\项目模块.vb" />
+    <Compile Include="接口\数据行接口.vb" />
+    <Compile Include="类型\人员类型.vb" />
+    <Compile Include="类型\生成\生成类型.vb" />
+    <Compile Include="类型\数据行类型.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -122,6 +132,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ft20200811DataSet.xsc">
+      <DependentUpon>ft20200811DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ft20200811DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ft20200811DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ft20200811DataSet.xss">
+      <DependentUpon>ft20200811DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

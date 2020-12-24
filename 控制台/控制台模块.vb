@@ -1,21 +1,14 @@
 ﻿
 
-Module 控制台模块
+Friend Module 控制台模块
     Sub Main()
-        Dim 人员 As String
+        System.Console.WriteLine("当地人若")
+        Dim 试试 As Foxtable.DataRow
 
-        人员 = "当地人若"
-        System.Console.WindowTop = 50
+        Dim 傻傻的 = 壳尘.获取对象(试试)
+        Dim 傻傻的1 As 壳尘.人员类型 = CType(傻傻的, 壳尘.人员类型)
+
     End Sub
 
-    Public Class Sdd
-        Public Overrides Function Equals(obj As Object) As Boolean
-            Return MyBase.Equals(obj)
-        End Function
-        Public Function Seer() As Sdd
-            Dim b = Me.Equals(New Object)
-            Return Nothing
-        End Function
-    End Class
 End Module
 

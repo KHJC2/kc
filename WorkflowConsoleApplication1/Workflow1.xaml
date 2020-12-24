@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Workflow1" this:Workflow1.ss="sde"
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Workflow1" sap2010:WorkflowViewState.IdRef="Workflow1_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
@@ -6,11 +6,7 @@
  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
- xmlns:this="clr-namespace:"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="ss" Type="InArgument(x:String)" />
-  </x:Members>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System</x:String>
@@ -34,37 +30,23 @@
       <AssemblyReference>System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <DoWhile Condition="[ss = &quot;ss&quot;]">
-    <Sequence>
-      <WriteLine Text="dfrrtttttt" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
-      <Assign>
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[ss]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">ss</InArgument>
-        </Assign.Value>
-        <sap2010:WorkflowViewState.IdRef>Assign_1</sap2010:WorkflowViewState.IdRef>
-      </Assign>
-      <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
-    </Sequence>
-    <sap2010:WorkflowViewState.IdRef>DoWhile_1</sap2010:WorkflowViewState.IdRef>
-    <sads:DebugSymbol.Symbol>d0lHOlxVc2Vyc1wxXHNvdXJjZVxyZXBvc1zlo7PlsJhcV29ya2Zsb3dDb25zb2xlQXBwbGljYXRpb24xXFdvcmtmbG93MS54YW1sCQFRAVUBAiUDNQ0CAQElFiUtAgEJJgUyEAIBAicHJ1QCAQcoBzAQAgEDJxcnIwIBCC0yLTQCAQYqMyo3AgEE</sads:DebugSymbol.Symbol>
-  </DoWhile>
-  <sap2010:WorkflowViewState.IdRef>Workflow1_1</sap2010:WorkflowViewState.IdRef>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="dfrrtttttt" />
+    <WriteLine Text="dee" sap2010:WorkflowViewState.IdRef="WriteLine_2" />
+    <sads:DebugSymbol.Symbol>d0tkOlxVc2Vyc1wxXFNvdXJjZVxSZXBvc1xLSEpDMlxrY1xXb3JrZmxvd0NvbnNvbGVBcHBsaWNhdGlvbjFcV29ya2Zsb3cxLnhhbWwFIQMlDgIBASIFIlICAQQjBSNLAgECIkMiTwIBBSMVIxoCAQM=</sads:DebugSymbol.Symbol>
+  </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="243,63" />
-      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="243,61" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="265,288">
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="213,61" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="213,61" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="235,286">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="DoWhile_1" sap:VirtualizedContainerService.HintSize="464,455" />
-      <sap2010:ViewStateData Id="Workflow1_1" sap:VirtualizedContainerService.HintSize="504,535" />
+      <sap2010:ViewStateData Id="Workflow1_1" sap:VirtualizedContainerService.HintSize="275,366" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

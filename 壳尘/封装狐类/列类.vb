@@ -7,7 +7,7 @@
 Imports Foxtable
 Imports Foxtable.WinForm
 
-Public Class 列类型
+Public Class 列类
 
     Public Sub New(狐列参数 As Foxtable.Col)
         Me.狐列 = 狐列参数

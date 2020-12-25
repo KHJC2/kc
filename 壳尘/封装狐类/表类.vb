@@ -12,7 +12,7 @@ Imports Foxtable.XLS
 Imports Foxtable
 
 <DefaultMember("Item")>
-Public Class 表类型
+Public Class 表类
 
     Implements IEnumerable(Of Foxtable.Row)
     Public ReadOnly Property 狐表 As Foxtable.Table

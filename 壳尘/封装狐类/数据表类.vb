@@ -7,7 +7,7 @@
 Imports System.Data.OleDb
 Imports Foxtable
 
-Public Class 数据表类型
+Public Class 数据表类
     Public Sub New(狐数据表参数 As Foxtable.DataTable)
         Me.狐数据表 = 狐数据表参数
     End Sub

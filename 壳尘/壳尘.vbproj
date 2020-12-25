@@ -104,24 +104,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="封装狐类型\列类型.vb" />
+    <Compile Include="封装狐类\列类.vb" />
     <Compile Include="封装狐模块\列模块.vb" />
     <Compile Include="封装狐模块\排序模块.vb" />
-    <Compile Include="封装狐类型\数据列类型.vb" />
-    <Compile Include="封装狐类型\数据行类型.vb" />
-    <Compile Include="封装狐类型\数据表类型.vb" />
+    <Compile Include="封装狐类\数据列类.vb" />
+    <Compile Include="封装狐类\数据行类.vb" />
+    <Compile Include="封装狐类\数据表类.vb" />
     <Compile Include="封装狐模块\筛选模块.vb" />
     <Compile Include="封装狐模块\系统模块.vb" />
     <Compile Include="封装狐模块\编辑模块.vb" />
-    <Compile Include="封装狐类型\行类型.vb" />
+    <Compile Include="封装狐类\行类.vb" />
     <Compile Include="封装狐模块\行模块.vb" />
-    <Compile Include="封装狐类型\表类型.vb" />
+    <Compile Include="封装狐类\表类.vb" />
     <Compile Include="封装狐模块\表模块.vb" />
     <Compile Include="封装狐模块\项目模块.vb" />
     <Compile Include="接口\数据行接口.vb" />
-    <Compile Include="类型\人员类型.vb" />
-    <Compile Include="类型\生成\生成类型.vb" />
-    <Compile Include="类型\数据行类型.vb" />
+    <Compile Include="类\类.vb" />
+    <Compile Include="类\生成\法律主体接口.vb" />
+    <Compile Include="类\生成\生成类.vb" />
+    <Compile Include="类\数据行类.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

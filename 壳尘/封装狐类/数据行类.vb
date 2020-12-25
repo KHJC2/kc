@@ -9,7 +9,7 @@ Imports System.Reflection
 Imports Foxtable
 
 <DefaultMember("Item")>
-Public Class 数据行类型
+Public Class 数据行类
 
     Public Sub New(狐数据行参数 As Foxtable.DataRow)
         Me.狐数据行 = 狐数据行参数

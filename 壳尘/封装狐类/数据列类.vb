@@ -6,7 +6,7 @@
 
 Imports Foxtable
 
-Public Class 数据列类型
+Public Class 数据列类
     Public Sub New(狐数据列参数 As Foxtable.DataCol)
         Me.狐数据列 = 狐数据列参数
     End Sub

@@ -119,7 +119,7 @@
     <Compile Include="封装狐模块\表模块.vb" />
     <Compile Include="封装狐模块\项目模块.vb" />
     <Compile Include="接口\数据行接口.vb" />
-    <Compile Include="类\类.vb" />
+    <Compile Include="类\生成\类.vb" />
     <Compile Include="类\生成\法律主体接口.vb" />
     <Compile Include="类\生成\生成类.vb" />
     <Compile Include="类\数据行类.vb" />

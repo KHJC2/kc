@@ -1,16 +1,4 @@
-﻿Partial Public Class 人员类
-    Public Sub 吃饭(饭_碗数 As Integer)
-        Do
-            饭_碗数 -= 1
-            If 饭_碗数 = 0 Then
-                Console.WriteLine("饭吃完了")
-                Exit Do
-            End If
-        Loop
-    End Sub
-End Class
-
-Partial Public Class 仓库类
+﻿Partial Public Class 仓库类
 End Class
 Partial Public Class 出入库单类
 End Class
@@ -42,6 +30,8 @@ Partial Public Class 群体类
 End Class
 Partial Public Class 群体成员类
 End Class
+Partial Public Class 人员类
+End Class
 Partial Public Class 人员关系类
 End Class
 Partial Public Class 商家类
@@ -68,7 +58,7 @@ Partial Public Class 商品sku类
 End Class
 Partial Public Class 商品spu类
 End Class
-Partial Public Class 商品类类
+Partial Public Class 商品类型类
 End Class
 Partial Public Class 商品流转类
 End Class
@@ -108,7 +98,3 @@ Partial Public Class 资金账号类
 End Class
 Partial Public Class 座机账号类
 End Class
-
-
-
-

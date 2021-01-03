@@ -86,6 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ft20200811DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="接口\表接口.vb" />
     <Compile Include="模块\壳模块.vb" />
     <Compile Include="模块\尘模块.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -119,10 +120,13 @@
     <Compile Include="封装狐模块\表模块.vb" />
     <Compile Include="封装狐模块\项目模块.vb" />
     <Compile Include="接口\数据行接口.vb" />
-    <Compile Include="类\生成\类.vb" />
-    <Compile Include="类\生成\法律主体接口.vb" />
-    <Compile Include="类\生成\生成类.vb" />
+    <Compile Include="类\生成\数据行类.vb" />
+    <Compile Include="接口\法律主体接口.vb" />
+    <Compile Include="类\生成\必要部分\生成数据行类.vb" />
     <Compile Include="类\数据行类.vb" />
+    <Compile Include="类\生成\必要部分\生成表类.vb" />
+    <Compile Include="类\生成\表类.vb" />
+    <Compile Include="类\订单类.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -135,6 +139,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="订单.cd" />
     <None Include="ft20200811DataSet.xsc">
       <DependentUpon>ft20200811DataSet.xsd</DependentUpon>
     </None>

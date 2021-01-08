@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Form2
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
@@ -22,10 +22,30 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.components = New System.ComponentModel.Container()
+        Me.Uc11 = New 控件设计.uc1()
+        Me.SuspendLayout()
+        '
+        'Uc11
+        '
+        Me.Uc11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Uc11.Location = New System.Drawing.Point(0, 0)
+        Me.Uc11.Name = "Uc11"
+        Me.Uc11.Size = New System.Drawing.Size(855, 520)
+        Me.Uc11.TabIndex = 0
+        '
+        'Form2
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(855, 520)
+        Me.Controls.Add(Me.Uc11)
+        Me.Name = "Form2"
+        Me.Text = "Form2"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents uc1 As 控件设计.uc1
+    Friend WithEvents Uc11 As 控件设计.uc1
 End Class

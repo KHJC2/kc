@@ -167,6 +167,9 @@ Public Module 项目事件
         Dim 表控件 As WinForm.Table = 窗体m.CreateSQLTable(列名, "Select top 1000 * From {" & 列名.Split("_")(0) & "} where 1 = 0 order by sys_id", "ft")
         表控件.Dock = System.Windows.Forms.DockStyle.Fill
         页.AddControl(表控件)
+        With 表控件
+            .RowHeaderVisible = True
+        End With
         Dim grid As C1.Win.C1FlexGrid.C1FlexGrid = 表控件.Table.Grid
         With grid
             '.AllowAddNew = True

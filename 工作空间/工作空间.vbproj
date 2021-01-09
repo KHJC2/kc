@@ -196,6 +196,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="全局表事件.vb" />
+    <Compile Include="内部函数.vb" />
     <Compile Include="窗体m事件.vb" />
     <Compile Include="项目事件.vb" />
   </ItemGroup>

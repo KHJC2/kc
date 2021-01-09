@@ -18,7 +18,7 @@ Public Class uc1
             Dim 页 = cdt.SelectedTab
             If 页.Controls.Count = 0 Then
                 Forms("m").StopRedraw()
-                项目事件.添加表控件(Forms("m"), 页.Name, 页)
+                全局函数.添加表控件到页(Forms("m"), 页)
                 Forms("m").ResumeRedraw()
 
             End If

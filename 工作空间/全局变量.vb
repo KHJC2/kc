@@ -8,7 +8,7 @@ Public Module 全局变量
     Private _旧当前行 As New Dictionary(Of String, Row) '表当前行
     Private _旧当前主表名 As String = ""
     Private _旧当前表名 As String = "" '当前表
-    Private _uc11 As uc1
+    Private _布局控件 As uc1
 
     Public Property 系统表列表 As Dictionary(Of String, DataTable)
         Get
@@ -64,12 +64,12 @@ Public Module 全局变量
         End Set
     End Property
 
-    Public Property Uc11 As uc1
+    Public Property 布局控件 As uc1
         Get
-            Return _uc11
+            Return _布局控件
         End Get
         Set(value As uc1)
-            _uc11 = value
+            _布局控件 = value
         End Set
     End Property
 End Module

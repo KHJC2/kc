@@ -13,11 +13,11 @@ Public Class uc1
 
     Private Sub cdt_SelectedTabChanged(sender As Object, e As EventArgs) Handles cdt主.SelectedTabChanged, cdt下.SelectedTabChanged
         Dim cdt As C1.Win.C1Command.C1DockingTab = CType(sender, C1.Win.C1Command.C1DockingTab)
-        If cdt.Name = "cdt下" Then
+        If cdt.Name = "cdt下" OrElse cdt.Name = "cdt主" Then
             Dim 页 = cdt.SelectedTab
             If 页.Controls.Count = 0 Then
                 Forms("m").StopRedraw()
-                项目事件.添加表控件(Forms("m"), 页.Name, 页)
+                全局函数.添加表控件到页(Forms("m"), 页)
                 Forms("m").ResumeRedraw()
             End If
         End If

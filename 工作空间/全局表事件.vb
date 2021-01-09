@@ -92,9 +92,7 @@ Public Module 全局表事件
         Else
             当前行id = -1
         End If
-
         Dim 表名 As String = e.Table.Name
-
         If 旧当前行.ContainsKey(表名) = False Then
             旧当前行.Add(表名, Nothing)
         Else
@@ -109,8 +107,6 @@ Public Module 全局表事件
             旧行id = -1
         End If
         Output.Show("<CurrentChanged_表-" & 表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
-
-
         If 当前行id <> 旧行id Then
             旧当前行(表名) = 当前行 '设置旧当前行
             If 表名 Like "m_*" AndAlso 表名.Remove(0, 2).Contains("_") = False Then '主表切换行
@@ -119,7 +115,6 @@ Public Module 全局表事件
             End If
         Else
         End If
-
         Output.Show("</CurrentChanged_表-" & 表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
     End Sub
     Public Sub BeforeSelChange()

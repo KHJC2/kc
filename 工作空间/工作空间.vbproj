@@ -173,7 +173,6 @@
   <ItemGroup>
     <Compile Include="全局函数.vb" />
     <Compile Include="全局变量.vb" />
-    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -196,10 +195,10 @@
     <Compile Include="uc1.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="全局表事件.vb" />
-    <Compile Include="内部函数.vb" />
-    <Compile Include="窗体m事件.vb" />
-    <Compile Include="项目事件.vb" />
+    <Compile Include="原始视图\全局表事件.vb" />
+    <Compile Include="原始视图\内部函数.vb" />
+    <Compile Include="原始视图\窗体m事件.vb" />
+    <Compile Include="原始视图\项目事件.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\licenses.licx" />

@@ -17,6 +17,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "控件设计", "控件设�
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "工作测试", "工作测试\工作测试.vbproj", "{65B8F368-5D40-401E-BC2B-7B977C602F3B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cshap库", "Cshap库\Cshap库.csproj", "{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,14 @@ Global
 		{65B8F368-5D40-401E-BC2B-7B977C602F3B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65B8F368-5D40-401E-BC2B-7B977C602F3B}.Release|x86.ActiveCfg = Release|Any CPU
 		{65B8F368-5D40-401E-BC2B-7B977C602F3B}.Release|x86.Build.0 = Release|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{44D2FD87-0A89-4645-A3FD-8C3A0331E5F0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

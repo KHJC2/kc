@@ -172,7 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="全局函数.vb" />
-    <Compile Include="全局变量.vb" />
+    <Compile Include="调用接口\全局变量.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -195,10 +195,13 @@
     <Compile Include="uc1.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="原始视图\全局表事件.vb" />
-    <Compile Include="原始视图\内部函数.vb" />
-    <Compile Include="原始视图\窗体m事件.vb" />
-    <Compile Include="原始视图\项目事件.vb" />
+    <Compile Include="全局表事件实现.vb" />
+    <Compile Include="调用接口\全局表事件.vb" />
+    <Compile Include="调用接口\内部函数.vb" />
+    <Compile Include="调用接口\窗体m事件.vb" />
+    <Compile Include="调用接口\模板\表事件模板.vb" />
+    <Compile Include="调用接口\项目事件.vb" />
+    <Compile Include="项目事件实现.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\licenses.licx" />
@@ -226,6 +229,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="XMLFile1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cshap库\Cshap库.csproj">
+      <Project>{44d2fd87-0a89-4645-a3fd-8c3a0331e5f0}</Project>
+      <Name>Cshap库</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

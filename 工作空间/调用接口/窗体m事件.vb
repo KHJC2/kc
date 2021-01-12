@@ -4,10 +4,13 @@ Public Module 窗体m事件
     Public Sub AfterClose(e As Foxtable.FormEventArgs)
         Output.Show("<AfterClose_form-" & e.Form.Name & ">")
         卸载控件(e)
+        全局变量.网络本地时间记录 = Nothing
+        全局变量.时间监控最后执行时间 = Nothing
         Output.Show("</AfterClose_form-" & e.Form.Name & ">")
     End Sub
     Public Sub AfterLoad(e As Foxtable.FormEventArgs)
         Output.Show("<AfterLoad_form-" & e.Form.Name & ">")
+        Dim 网络时间 As Date = 全局变量.网络本地时间记录.Keys(0)
         全局函数.设置系统表列表()
         '设置所有表()
         加载控件(e)

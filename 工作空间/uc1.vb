@@ -21,5 +21,32 @@ Public Class uc1
                 Forms("m").ResumeRedraw()
             End If
         End If
+        Dim ss(25) As Object
+        ss(0) = (HardWareInfo)
+        ss(1) = SysInfo.AvailablePhysicalMemory
+        ss(2) = SysInfo.ChineseScript
+        ss(3) = SysInfo.ComputerName
+        ss(4) = SysInfo.ConnectName
+        ss(5) = SysInfo.ConnectType
+        ss(6) = SysInfo.ConvertScript
+        ss(7) = SysInfo.FileIdentify
+        ss(8) = SysInfo.FormatCode
+        ss(9) = SysInfo.ImportsStrings
+        ss(10) = SysInfo.OSFullName
+        ss(11) = SysInfo.OSVersion
+        ss(12) = SysInfo.PublishFiles
+        ss(13) = SysInfo.referFiles
+        ss(14) = SysInfo.ScreenDpiX
+        ss(15) = SysInfo.ScreenDpiY
+        ss(16) = SysInfo.ScreenHeight
+        ss(17) = SysInfo.ScreenWidth
+        ss(18) = SysInfo.SourceString10
+        ss(19) = SysInfo.SourceString4
+        ss(20) = SysInfo.spaceNames
+        ss(21) = SysInfo.TotalPhysicalMemory
+        ss(22) = SysInfo.UserName
+        ss(23) = SysInfo.WorkingAreaHeight
+        ss(24) = SysInfo.WorkingAreaWidth
+        ss(25) = My.Computer
     End Sub
 End Class

@@ -1,38 +1,7 @@
 ﻿Imports Foxtable
 
-Public Module 项目事件
-
-
-
-
-    Public Sub BeforeConnectOuterDataSource()
-
-    End Sub
-
-    Public Sub BeforeLoadInnerTable()
-
-    End Sub
-
-    Public Sub BeforeLoadOuterTable()
-
-    End Sub
-
-    Public Sub Initialize()
-
-    End Sub
-
-    Public Sub BeforeOpenProject()
-
-    End Sub
-
-    Public Sub MainTableChanging()
-
-    End Sub
-
-    Public Sub MainTableChanged()
-
-    End Sub
-    Public Sub CurrentTableChanged()
+Friend Module 项目事件实现
+    Friend Sub CurrentTableChanged()
         Dim 当前表名 As String = CurrentTable.Name
         Dim 旧当前 As String = 旧当前表名
         Output.Show("<CurrentTableChanged_当前表-" & 当前表名 & ".旧表-" & 旧当前 & ">")
@@ -59,51 +28,10 @@ Public Module 项目事件
         Output.Show("</CurrentTableChanged_当前表-" & 当前表名 & ".旧表-" & 旧当前 & ">")
     End Sub
 
-    Public Sub AfterOpenProject()
-        'Output.Show("<AfterOpenProject>")
-        '全局函数.设置系统表列表()
-        'Output.Show("</AfterOpenProject>")
-    End Sub
-
-    Public Sub LoadUserSetting()
+    Friend Sub BeforeOpenProject(e As BeforeOpenProjectEventArgs)
 
     End Sub
 
-    Public Sub BeforeCloseProject()
-
-    End Sub
-
-    Public Sub SystemIdle()
-
-    End Sub
-
-    Public Sub AfterSaveProject()
-
-    End Sub
-
-    Public Sub BeforeSaveProject()
-
-    End Sub
-
-    Public Sub GlobalVariableChanged()
-
-    End Sub
-
-    Public Sub BeforeShowErrorMessage()
-
-    End Sub
-
-    Public Sub NetworkAvailabilityChanged()
-
-    End Sub
-
-    Public Sub NetworkAddressChanged()
-
-    End Sub
-
-    Public Sub BeforeCloseTable()
-
-    End Sub
     Private Sub 切换子表(当前表名 As String, 窗体m As WinForm.Form)
         Output.Show("<切换子表>")
         '旧当前子表名(当前表名.Split("_")(3)) = 当前表名.Remove(0, 2) ''记录主表当前子表
@@ -153,7 +81,6 @@ Public Module 项目事件
         窗体m.ResumeRedraw()
         Output.Show("</切换主表>")
     End Sub
-
 
 
 End Module

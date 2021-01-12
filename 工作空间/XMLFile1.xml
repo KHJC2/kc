@@ -1,194 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
-<see >
-	<AfterLoad_form-m>
-		<允许列头筛选>
-		</允许列头筛选>
-		<加载控件>
-		</加载控件>
-		<布局控件>
-		</布局控件>
-		<打印已废弃的表设计>
-		</打印已废弃的表设计>
-		<设置子表名列表>
-		</设置子表名列表>
-		<子表名列表排序>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-			<设置旧当前子表名>
-			</设置旧当前子表名>
-		</子表名列表排序>
-
-	</AfterLoad_form-m>
-	<CurrentTableChanged_当前表-程序.旧表->
-	</CurrentTableChanged_当前表-程序.旧表->
-
-
-	<CurrentChanged_表-程序.行-1.旧行--1>
-
-	</CurrentChanged_表-程序.行-1.旧行--1>
-
-	<CurrentChanged_表-程序.行-1.旧行-1>
-	</CurrentChanged_表-程序.行-1.旧行-1>
-	<CurrentChanged_表-水电费.行-0.旧行--1>
-	</CurrentChanged_表-水电费.行-0.旧行--1>
-	<CurrentChanged_表-m_订单.行--1.旧行--1>
-	</CurrentChanged_表-m_订单.行--1.旧行--1>
-	<CurrentChanged_表-m_群体.行--1.旧行--1>
-	</CurrentChanged_表-m_群体.行--1.旧行--1>
-	<CurrentChanged_表-m_商家客户商品.行--1.旧行--1>
-	</CurrentChanged_表-m_商家客户商品.行--1.旧行--1>
-	<CurrentChanged_表-m_商品seu.行--1.旧行--1>
-	</CurrentChanged_表-m_商品seu.行--1.旧行--1>
-	<CurrentChanged_表-m_商品sku.行--1.旧行--1>
-	</CurrentChanged_表-m_商品sku.行--1.旧行--1>
-	<CurrentChanged_表-m_商品spu.行--1.旧行--1>
-	</CurrentChanged_表-m_商品spu.行--1.旧行--1>
-	<CurrentChanged_表-m_仓库.行--1.旧行--1>
-	</CurrentChanged_表-m_仓库.行--1.旧行--1>
-	<CurrentChanged_表-m_商品类型.行--1.旧行--1>
-	</CurrentChanged_表-m_商品类型.行--1.旧行--1>
-	<CurrentChanged_表-m_商品流转.行--1.旧行--1>
-	</CurrentChanged_表-m_商品流转.行--1.旧行--1>
-	<CurrentChanged_表-m_商品流转明细.行--1.旧行--1>
-	</CurrentChanged_表-m_商品流转明细.行--1.旧行--1>
-	<CurrentChanged_表-m_商品品牌.行--1.旧行--1>
-	</CurrentChanged_表-m_商品品牌.行--1.旧行--1>
-	<CurrentChanged_表-m_资金账单履债明细.行--1.旧行--1>
-	</CurrentChanged_表-m_资金账单履债明细.行--1.旧行--1>
-	<CurrentChanged_表-m_主体商品.行--1.旧行--1>
-	</CurrentChanged_表-m_主体商品.行--1.旧行--1>
-	<CurrentChanged_表-m_资金账单计息明细.行--1.旧行--1>
-	</CurrentChanged_表-m_资金账单计息明细.行--1.旧行--1>
-	<CurrentChanged_表-m_座机账号.行--1.旧行--1>
-	</CurrentChanged_表-m_座机账号.行--1.旧行--1>
-	<CurrentChanged_表-m_资金账号.行--1.旧行--1>
-	</CurrentChanged_表-m_资金账号.行--1.旧行--1>
-	<CurrentChanged_表-m_系统表.行--1.旧行--1>
-	</CurrentChanged_表-m_系统表.行--1.旧行--1>
-	<CurrentChanged_表-m_支付宝账号.行--1.旧行--1>
-	</CurrentChanged_表-m_支付宝账号.行--1.旧行--1>
-	<CurrentChanged_表-m_手机账号.行--1.旧行--1>
-	</CurrentChanged_表-m_手机账号.行--1.旧行--1>
-	<CurrentChanged_表-m_账号.行--1.旧行--1>
-	</CurrentChanged_表-m_账号.行--1.旧行--1>
-	<CurrentChanged_表-m_微信账号.行--1.旧行--1>
-	</CurrentChanged_表-m_微信账号.行--1.旧行--1>
-	<CurrentChanged_表-m_主体权益.行--1.旧行--1>
-	</CurrentChanged_表-m_主体权益.行--1.旧行--1>
-	<CurrentChanged_表-m_用户绑定.行--1.旧行--1>
-	</CurrentChanged_表-m_用户绑定.行--1.旧行--1>
-	<CurrentChanged_表-m_用户账号.行--1.旧行--1>
-	</CurrentChanged_表-m_用户账号.行--1.旧行--1>
-	<CurrentChanged_表-m_资金账单.行--1.旧行--1>
-	</CurrentChanged_表-m_资金账单.行--1.旧行--1>
-	<CurrentChanged_表-m_系统列.行--1.旧行--1>
-	</CurrentChanged_表-m_系统列.行--1.旧行--1>
-	<CurrentChanged_表-m_银行账号.行--1.旧行--1>
-	</CurrentChanged_表-m_银行账号.行--1.旧行--1>
-	<CurrentChanged_表-m_出入库单.行--1.旧行--1>
-	</CurrentChanged_表-m_出入库单.行--1.旧行--1>
-	<CurrentChanged_表-m_地址.行--1.旧行--1>
-	</CurrentChanged_表-m_地址.行--1.旧行--1>
-	<CurrentChanged_表-m_地址搬运.行--1.旧行--1>
-	</CurrentChanged_表-m_地址搬运.行--1.旧行--1>
-	<CurrentChanged_表-m_订单计划.行--1.旧行--1>
-	</CurrentChanged_表-m_订单计划.行--1.旧行--1>
-	<CurrentChanged_表-m_订单计划明细.行--1.旧行--1>
-	</CurrentChanged_表-m_订单计划明细.行--1.旧行--1>
-	<CurrentChanged_表-m_订单明细.行--1.旧行--1>
-	</CurrentChanged_表-m_订单明细.行--1.旧行--1>
-	<CurrentChanged_表-m_法律主体.行--1.旧行--1>
-	</CurrentChanged_表-m_法律主体.行--1.旧行--1>
-	<CurrentChanged_表-m_交易主体.行--1.旧行--1>
-	</CurrentChanged_表-m_交易主体.行--1.旧行--1>
-	<CurrentChanged_表-m_联系账号.行--1.旧行--1>
-	</CurrentChanged_表-m_联系账号.行--1.旧行--1>
-	<CurrentChanged_表-m_配送单.行--1.旧行--1>
-	</CurrentChanged_表-m_配送单.行--1.旧行--1>
-	<CurrentChanged_表-m_企业.行--1.旧行--1>
-	</CurrentChanged_表-m_企业.行--1.旧行--1>
-	<CurrentChanged_表-m_客户端.行--1.旧行--1>
-	</CurrentChanged_表-m_客户端.行--1.旧行--1>
-	<CurrentChanged_表-m_群体成员.行--1.旧行--1>
-	</CurrentChanged_表-m_群体成员.行--1.旧行--1>
-	<CurrentChanged_表-m_人员.行--1.旧行--1>
-	</CurrentChanged_表-m_人员.行--1.旧行--1>
-	<CurrentChanged_表-m_人员关系.行--1.旧行--1>
-	</CurrentChanged_表-m_人员关系.行--1.旧行--1>
-	<CurrentChanged_表-m_商家.行--1.旧行--1>
-	</CurrentChanged_表-m_商家.行--1.旧行--1>
-	<CurrentChanged_表-m_商家地址费用.行--1.旧行--1>
-	</CurrentChanged_表-m_商家地址费用.行--1.旧行--1>
-	<CurrentChanged_表-m_商家活动.行--1.旧行--1>
-	</CurrentChanged_表-m_商家活动.行--1.旧行--1>
-	<CurrentChanged_表-m_商家活动商品.行--1.旧行--1>
-	</CurrentChanged_表-m_商家活动商品.行--1.旧行--1>
-	<CurrentChanged_表-m_商家活动客户.行--1.旧行--1>
-	</CurrentChanged_表-m_商家活动客户.行--1.旧行--1>
-	<CurrentChanged_表-m_商家客户.行--1.旧行--1>
-	</CurrentChanged_表-m_商家客户.行--1.旧行--1>
-	<CurrentChanged_表-m_商家套餐.行--1.旧行--1>
-	</CurrentChanged_表-m_商家套餐.行--1.旧行--1>
-	<CurrentChanged_表-m_商家套餐商品.行--1.旧行--1>
-	</CurrentChanged_表-m_商家套餐商品.行--1.旧行--1>
-
-
-
-</see>
+<AfterLoad_form-m>
+	<加载控件>
+	</加载控件>
+	<添加cdt主页>
+	</添加cdt主页>
+	<设置子表名列表>
+	</设置子表名列表>
+	<子表名列表排序>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+		<设置旧当前子表名>
+		</设置旧当前子表名>
+	</子表名列表排序>
+</AfterLoad_form-m>
+<CurrentTableChanged_当前表-程序.旧表->
+</CurrentTableChanged_当前表-程序.旧表->
+<CurrentChanged_表-程序.行-1.旧行--1>
+</CurrentChanged_表-程序.行-1.旧行--1>
+<CurrentChanged_表-程序.行-1.旧行-1>
+</CurrentChanged_表-程序.行-1.旧行-1>
+<CurrentChanged_表-水电费.行-0.旧行--1>
+</CurrentChanged_表-水电费.行-0.旧行--1>
+<CurrentChanged_表-m_仓库.行--1.旧行--1>
+</CurrentChanged_表-m_仓库.行--1.旧行--1>
+<CurrentTableChanged_当前表-m_仓库.旧表-程序>
+	<切换主表>
+		<CurrentTableChanged_当前表-m_仓库_父级仓库_仓库.旧表-m_仓库>
+		</CurrentTableChanged_当前表-m_仓库_父级仓库_仓库.旧表-m_仓库>
+		<CurrentChanged_表-m_仓库_父级仓库_仓库.行--1.旧行--1>
+		</CurrentChanged_表-m_仓库_父级仓库_仓库.行--1.旧行--1>
+	</切换主表>
+</CurrentTableChanged_当前表-m_仓库.旧表-程序>
+<CurrentChanged_表-m_仓库.行--1.旧行--1>
+</CurrentChanged_表-m_仓库.行--1.旧行--1>

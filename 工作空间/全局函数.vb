@@ -12,6 +12,31 @@ Friend Module 全局函数
         Next
     End Sub
 
+    Friend Sub 有更改行监控()
+        If 有更改的主表行.Count > 0 Then
+            Dim 可删除 As New List(Of String)
+            For Each 表名 As String In 有更改的主表行.Keys
+                Dim 编号 As String = 有更改的主表行(表名).Split("|")(0)
+                Dim 记录时间 As Date = CDate(有更改的主表行(表名).Split("|")(1))
+                Dim 间隔 As TimeSpan = Date.Now - 记录时间
+                If 间隔.TotalMilliseconds > 50 Then
+                    Dim 位置 As Integer = Tables(表名).Find(编号, 0, 表名.Remove(0, 2) & "_编号", True, True, True)
+                    If 位置 <> -1 Then
+                        If Tables(表名).Position <> 位置 Then
+                            Tables(表名).Position = 位置
+                        End If
+                    End If
+                    可删除.Add(表名)
+                    PopMessage("当前行子表数据未保存修改", "请保存修改", PopiconEnum.Infomation, 2)
+                End If
+            Next
+            For Each 可删除表名 As String In 可删除
+                有更改的主表行.Remove(可删除表名)
+            Next
+        End If
+
+    End Sub
+
     Friend Sub 添加表控件到页(窗体m As WinForm.Form, 页 As WinForm.TabPage)
         Dim 表控件 As WinForm.Table = 窗体m.CreateSQLTable(页.Name, "Select top 1000 * From {" & 页.Name.Split("_")(0) & "} where 1 = 0 order by sys_id", "ft")
         表控件.Dock = System.Windows.Forms.DockStyle.Fill
@@ -26,6 +51,7 @@ Friend Module 全局函数
             For Each 数据列 As DataCol In .DataCols
                 设置数据列(数据列)
             Next
+            .GlobalHandler.DataRowAdding = True
             .AllowDragColumn = False
             .AllowInitialize = False
             .AllowResizeColumn = True

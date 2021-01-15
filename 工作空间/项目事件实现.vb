@@ -29,7 +29,9 @@ Friend Module 项目事件实现
     End Sub
 
     Friend Sub BeforeOpenProject(e As BeforeOpenProjectEventArgs)
+        Output.Show("<BeforeOpenProject>")
 
+        Output.Show("</BeforeOpenProject>")
     End Sub
 
     Private Sub 切换子表(当前表名 As String, 窗体m As WinForm.Form)

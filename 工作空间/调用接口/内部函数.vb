@@ -6,5 +6,8 @@
     Public Sub 本地时间监控(间隔 As Integer)
         全局函数.本地时间监控(间隔)
     End Sub
+    Public Sub 有更改行监控()
+        全局函数.有更改行监控()
+    End Sub
 End Module
 

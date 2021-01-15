@@ -198,6 +198,7 @@
     <Compile Include="全局表事件实现.vb" />
     <Compile Include="调用接口\全局表事件.vb" />
     <Compile Include="调用接口\内部函数.vb" />
+    <Compile Include="调用接口\测试.vb" />
     <Compile Include="调用接口\窗体m事件.vb" />
     <Compile Include="调用接口\模板\表事件模板.vb" />
     <Compile Include="调用接口\项目事件.vb" />
@@ -210,6 +211,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc1.resx">
+      <DependentUpon>uc1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

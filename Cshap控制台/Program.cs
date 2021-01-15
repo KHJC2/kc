@@ -35,21 +35,71 @@ namespace Cshap控制台
             //{
             //    Console.WriteLine(ss);
             //}
-            for (int i = 0; i < 3; i++)
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Console.WriteLine(全局ID.GenerateUniqueID());
+
+            //}
+            //Console.WriteLine("----------------------------");
+
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Console.WriteLine(全局ID.GenerateOrderNumber());
+
+            //}
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Console.WriteLine(Guid.NewGuid());
+
+            //}
+
+
+
+            for (int i = 0; i < 100; i++)
             {
-                DateTime dateTime = 获取网络时间.DataStandardTime();
+                DateTime dateTime = DateTime.MaxValue;
+                //DateTime dateTime1 = new DateTime(2021, 1, 12, 23, 59, 59, 999);
+                DateTime dt2020 = new DateTime(9999, 12, 31, 23, 59, 59, 999);
+
                 DateTime dateTime1 = DateTime.Now;
-                Console.WriteLine(dateTime.ToString("yyyy-MM-dd HH:mm:ss:fffffff"));
-                Console.WriteLine(dateTime1.ToString("yyyy-MM-dd HH:mm:ss:fffffff"));
-                TimeSpan timeSpan = dateTime - dateTime1;
-                Console.WriteLine(timeSpan.TotalMilliseconds);
-                Console.WriteLine("_____________________");
+                TimeSpan span = dateTime1 - dt2020;
+                long  de = span.Ticks;
+                 Console.WriteLine(de.ToString("0000000000000000000.00000"));
 
+                //Console.WriteLine(span.TotalMilliseconds.ToString("0.00"));
             }
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Console.WriteLine(Guid.NewGuid().GetHashCode());
+            //}
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Console.WriteLine(全局ID.GenerateUnique);
+            //}
+            Guid guid = Guid.NewGuid();
+            byte[] b = guid.ToByteArray();
+            string str = guid.ToString();
 
+            Guid guid1 = new Guid(b);
+            Guid guid2 = new Guid(str);
+            //long l = Convert.ToInt64(b);
+        //string     lll = BitConverter.ToString(b, 0, b.Length);
+            //long ll = BitConverter.ToInt64(b, 0);
+            //byte[] b1 = BitConverter.GetBytes(ll);
+            //Guid guid12 = new Guid(b1);
 
+            Console.WriteLine(guid.ToString());
+            Console.WriteLine(guid1.ToString());
+            Console.WriteLine(guid2.ToString());
+
+            //Console.WriteLine(guid12.ToString());
+            //Console.WriteLine(l);
+            //Console.WriteLine(ll);
+            //Console.WriteLine(lll);
+
+            //Console.WriteLine(Guid.NewGuid());
             Console.ReadLine();
-
+            
 
 
 

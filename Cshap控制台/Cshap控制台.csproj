@@ -64,5 +64,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cshap库\Cshap库.csproj">
+      <Project>{44d2fd87-0a89-4645-a3fd-8c3a0331e5f0}</Project>
+      <Name>Cshap库</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

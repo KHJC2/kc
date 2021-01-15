@@ -12,6 +12,7 @@ Public Module 全局变量
     Private _网络本地时间记录 As Dictionary(Of Date, Date)
     Friend _时差 As Double
     Private _时间监控最后执行时间 As Date
+    Private _有更改的主表行 As New Dictionary(Of String, String)
     'Private _时间监控开始时间 As Date
     'Private _时间监控执行次数 As Integer
     'Private _时间监控总误差 As Double
@@ -122,6 +123,15 @@ Public Module 全局变量
         End Get
         Set(value As Date)
             _时间监控最后执行时间 = value
+        End Set
+    End Property
+
+    Public Property 有更改的主表行 As Dictionary(Of String, String)
+        Get
+            Return _有更改的主表行
+        End Get
+        Set(value As Dictionary(Of String, String))
+            _有更改的主表行 = value
         End Set
     End Property
 

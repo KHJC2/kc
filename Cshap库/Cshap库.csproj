@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="全局ID.cs" />
     <Compile Include="获取网络时间.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

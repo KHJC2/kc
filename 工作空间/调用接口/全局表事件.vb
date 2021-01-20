@@ -46,7 +46,8 @@ Public Module 全局表事件
 
     End Sub
     Public Sub BeforeDeleteDataRow()
-
+        '紧急任务:
+        全局表事件实现.BeforeDeleteDataRow()
     End Sub
     Public Sub DataRowDeleting()
 
@@ -118,8 +119,8 @@ Public Module 全局表事件
 
     End Sub
 
-    Public Sub AfterLoad()
-
+    Public Sub AfterLoad(e As Foxtable.LoadEventArgs)
+        全局表事件实现.AfterLoad(e)
     End Sub
     Public Sub BeforeFilter()
 

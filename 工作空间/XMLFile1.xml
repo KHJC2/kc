@@ -89,3 +89,8 @@
 </CurrentTableChanged_当前表-m_仓库.旧表-程序>
 <CurrentChanged_表-m_仓库.行--1.旧行--1>
 </CurrentChanged_表-m_仓库.行--1.旧行--1>
+
+Me.ImageList1.Images.SetKeyName(0, "00589.ico")
+Me.ImageList1.Images.SetKeyName(1, "Chart32.ico")
+Me.ImageList1.Images.SetKeyName(2, "Chart.ico")
+Me.ImageList1.Images.SetKeyName(3, "options.png")

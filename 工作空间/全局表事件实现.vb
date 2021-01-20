@@ -10,30 +10,34 @@ Friend Module 全局表事件实现
         Else
             当前行id = -1
         End If
-        Dim 表名 As String = e.Table.Name
-        If 旧当前行.ContainsKey(表名) = False Then
-            旧当前行.Add(表名, Nothing)
+        Dim 当前表名 As String = e.Table.Name
+        If 旧当前行.ContainsKey(当前表名) = False Then
+            旧当前行.Add(当前表名, Nothing)
         Else
         End If
-        If 旧当前行(表名) IsNot Nothing Then
-            If 旧当前行(表名).DataRow.RowState = 1 OrElse 旧当前行(表名).DataRow.RowState = 8 Then
+        If 旧当前行(当前表名) IsNot Nothing Then
+            If 旧当前行(当前表名).DataRow.RowState = 1 OrElse 旧当前行(当前表名).DataRow.RowState = 8 Then
                 旧行id = -2
             Else
-                旧行id = 旧当前行(表名).DataRow("_Identify")
+                旧行id = 旧当前行(当前表名).DataRow("_Identify")
             End If
         Else
             旧行id = -1
         End If
-        Output.Show("<CurrentChanged_表-" & 表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
+        Output.Show("<CurrentChanged_表-" & 当前表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
         If 当前行id <> 旧行id Then
-            If 表名 Like "m_*" AndAlso 表名.Remove(0, 2).Contains("_") = False Then '主表切换行
+            If 当前表名 Like "m_*" AndAlso 当前表名.Remove(0, 2).Contains("_") = False Then '主表切换行
                 主表切换行(e)
             Else
             End If
-            旧当前行(表名) = 当前行 '设置旧当前行
+            旧当前行(当前表名) = 当前行 '设置旧当前行
         Else
         End If
-        Output.Show("</CurrentChanged_表-" & 表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
+        Output.Show("</CurrentChanged_表-" & 当前表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
+    End Sub
+
+    Friend Sub BeforeDeleteDataRow()
+        Throw New NotImplementedException()
     End Sub
 
     Friend Sub DataRowAdding(e As Foxtable.DataRowEventArgs)
@@ -66,11 +70,35 @@ Friend Module 全局表事件实现
         Output.Show("</新增行>")
     End Sub
 
+    Friend Sub AfterLoad(e As LoadEventArgs)
+        For Each table As Table In Tables
+            If table.DataTable Is e.DataTable Then
+                For Each col As Col In table.Cols
+                    If col.Name.Split("_").Length = 3 Then
+                        col.DropForm = "dfm"
+                        'Dim dmp As New TableDataMap
+                        'dmp.DataTable = "客户" '指定数据来源表
+                        'dmp.ValueCol = "ID" '指定取值列
+                        'dmp.DisplayCol = "公司" '指定显示列
+                        ''指定下拉列表时显示哪些列的数据
+                        'dmp.ListCols = "ID,公司,姓氏,名字,职务,业务电话,传真号,地址,城市,邮政编码"
+                        'dmp.Sort = "城市" '指定排序方式
+                        'Tables("订单").Cols("客户 ID").DataMap = dmp.CreateDataMap() '生成并设置DataMap
+
+                        '.DataMap = 
+                    End If
+                Next
+
+            End If
+        Next
+
+    End Sub
+
     Private Sub 子表新增行(e As DataRowEventArgs)
         Output.Show("<主表新增行>")
         Dim cdt主 As WinForm.TabControl = Forms("m").Controls("cdt主")
         Dim 页 As WinForm.TabPage = cdt主.SelectedPage
-        Dim 主表 As Table
+        Dim 主表 As Table = Nothing
         If 页 IsNot Nothing Then
             If 页.Name = e.DataTable.Name.Split("_")(3) Then
                 主表 = Tables("m_" & 页.Name)
@@ -78,7 +106,7 @@ Friend Module 全局表事件实现
             End If
         Else
         End If
-        Dim 主表当前行 As Row
+        Dim 主表当前行 As Row = Nothing
         If 主表 IsNot Nothing Then
             主表当前行 = 主表.Current
         End If

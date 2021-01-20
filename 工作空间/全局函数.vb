@@ -1,15 +1,31 @@
-﻿Imports C1.Win.C1FlexGrid
+﻿Imports System.Drawing
+Imports System.Windows.Forms
+Imports C1.Win.C1FlexGrid
 Imports Foxtable
 
 Friend Module 全局函数
     Friend Sub 设置系统表列表()
         Dim 连接 As Connection = Connections("ft")
-        Dim 查询字符串 As String = "Select top 1000 * From {表名} Where 1 = 0 order by sys_id"
+        Dim 查询字符串 As String = "Select top 1000 * From {表名} Where 1 = 0 order by _Identify asc "
+        Dim 表名拼音集 As New Dictionary(Of String, String)
         For Each 表名 As String In 连接.GetTableNames
             If 表名 <> "sysdiagrams" AndAlso Not 全局变量.系统表列表.ContainsKey(表名) Then
                 全局变量.系统表列表.Add(表名, New SQLCommand() With {.ConnectionName = "ft", .CommandText = 查询字符串.Replace("表名", 表名)}.ExecuteReader(True))
+                Dim item As String = PY.GetPY(表名, True, 3)
+                If Not 表名拼音集.ContainsValue(item) Then
+                    表名拼音集.Add(表名, item)
+                Else
+                    Dim key As String = Nothing
+                    For Each 名 As String In 表名拼音集.Keys
+                        If 表名拼音集(名) = item Then
+                            key = 名
+                        End If
+                    Next
+                    Windows.Forms.MessageBox.Show("[" & 表名 & "]拼音被" & "[" & key & "] 占用", "提示", MessageBoxButtons.OK)
+                End If
             End If
         Next
+
     End Sub
 
     Friend Sub 有更改行监控()
@@ -38,7 +54,7 @@ Friend Module 全局函数
     End Sub
 
     Friend Sub 添加表控件到页(窗体m As WinForm.Form, 页 As WinForm.TabPage)
-        Dim 表控件 As WinForm.Table = 窗体m.CreateSQLTable(页.Name, "Select top 1000 * From {" & 页.Name.Split("_")(0) & "} where 1 = 0 order by sys_id", "ft")
+        Dim 表控件 As WinForm.Table = 窗体m.CreateSQLTable(页.Name, "Select top 1000 * From {" & 页.Name.Split("_")(0) & "} where 1 = 0 order by _Identify asc ", "ft")
         表控件.Dock = System.Windows.Forms.DockStyle.Fill
         页.AddControl(表控件)
         设置表控件(表控件)
@@ -51,6 +67,8 @@ Friend Module 全局函数
             For Each 数据列 As DataCol In .DataCols
                 设置数据列(数据列)
             Next
+
+
             .GlobalHandler.DataRowAdding = True
             .AllowDragColumn = False
             .AllowInitialize = False
@@ -59,6 +77,7 @@ Friend Module 全局函数
             .AllowResizeSingleRow = False
             .DeleteRowPrompt = False
             .PreserveEditMode = True
+
             .BuildHeader()
 
         End With
@@ -88,9 +107,9 @@ Friend Module 全局函数
     Friend Sub 设置grid(grid As C1.Win.C1FlexGrid.C1FlexGrid)
         With grid
             '.AllowAddNew = True '未知情况
-            .AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.Rows
+            '.AllowDragging = C1.Win.C1FlexGrid.AllowDraggingEnum.Rows
             .ShowCellLabels = True
-            .AutoResize = True
+            '.AutoResize = True
             .AllowFiltering = True
             For Each col As Column In .Cols
                 设置gridcol(col)
@@ -103,6 +122,7 @@ Friend Module 全局函数
             '.AllowFiltering = True '冲突
             '.AllowResizing = True
             '.AllowExpressionEditing = True ,无程序集dll
+
         End With
     End Sub
 
@@ -110,6 +130,8 @@ Friend Module 全局函数
         With 表
             .AutoSizeCols()
             .AutoSizeRows()
+            .ListMode = True
+
             '.AllowBackEndFilter = True '允许通过菜单筛选后台数据
             '.AllowBackgroundStatistics = True '直接统计后台数据
             .AllowDragColumn = False
@@ -131,7 +153,10 @@ Friend Module 全局函数
             ' .CodeDictionary = New Dictionary(Of String, String)
             '.ComboList = ""
             '.DataMap = Nothing
-            '.DropForm = Nothing
+            If .Name.Split("_").Length = 3 Then
+                .DropForm = "dfm"
+                '.DataMap = Nothing
+            End If
             '.DropTree = Nothing
             '.ShortCaption = .Caption
             '.DropTree = Nothing
@@ -159,7 +184,7 @@ Friend Module 全局函数
         设置grid(表控件.Table.Grid)
         设置表(表控件.Table)
         With 表控件
-
+            .CurrentRowBackColor = Color.NavajoWhite
         End With
     End Sub
 

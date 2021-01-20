@@ -1,4 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports System.Windows.Forms
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class uc1
     Inherits System.Windows.Forms.UserControl
 
@@ -24,8 +26,12 @@ Partial Class uc1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uc1))
         Me.ccd左 = New C1.Win.C1Command.C1CommandDock()
         Me.cdt左 = New C1.Win.C1Command.C1DockingTab()
+        Me.工作表 = New C1.Win.C1Command.C1DockingTabPage()
+        Me.工作表目录树 = New System.Windows.Forms.TreeView()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ccd右 = New C1.Win.C1Command.C1CommandDock()
         Me.cdt右 = New C1.Win.C1Command.C1DockingTab()
         Me.ccd下 = New C1.Win.C1Command.C1CommandDock()
@@ -34,9 +40,12 @@ Partial Class uc1
         Me.ccd主 = New C1.Win.C1Command.C1CommandDock()
         Me.cdm = New C1.Win.C1Command.C1DockingManager(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cdt替 = New C1.Win.C1Command.C1DockingTab()
         CType(Me.ccd左, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ccd左.SuspendLayout()
         CType(Me.cdt左, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cdt左.SuspendLayout()
+        Me.工作表.SuspendLayout()
         CType(Me.ccd右, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ccd右.SuspendLayout()
         CType(Me.cdt右, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +56,8 @@ Partial Class uc1
         CType(Me.ccd主, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ccd主.SuspendLayout()
         CType(Me.cdm, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.cdt替, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ccd左
@@ -69,11 +80,12 @@ Partial Class uc1
         Me.cdt左.Alignment = System.Windows.Forms.TabAlignment.Bottom
         Me.cdt左.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.cdt左.CanAutoHide = True
-        Me.cdt左.CanCloseTabs = True
         Me.cdt左.CanMoveTabs = True
+        Me.cdt左.Controls.Add(Me.工作表)
         Me.cdt左.HotTrack = True
         Me.cdt左.Location = New System.Drawing.Point(0, 0)
         Me.cdt左.Name = "cdt左"
+        Me.cdt左.SelectedIndex = 1
         Me.cdt左.ShowCaption = True
         Me.cdt左.ShowTabList = True
         Me.cdt左.ShowToolTips = True
@@ -83,6 +95,41 @@ Partial Class uc1
         Me.cdt左.TabsSpacing = 1
         Me.cdt左.VisualStyle = C1.Win.C1Command.VisualStyle.Office2010Black
         Me.cdt左.VisualStyleBase = C1.Win.C1Command.VisualStyle.Office2010Black
+        '
+        '工作表
+        '
+        Me.工作表.CaptionVisible = True
+        Me.工作表.Controls.Add(Me.工作表目录树)
+        Me.工作表.Location = New System.Drawing.Point(1, 1)
+        Me.工作表.Name = "工作表"
+        Me.工作表.Size = New System.Drawing.Size(295, 567)
+        Me.工作表.TabIndex = 0
+        Me.工作表.Text = "工作表"
+        '
+        '工作表目录树
+        '
+        Me.工作表目录树.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.工作表目录树.FullRowSelect = True
+        Me.工作表目录树.HideSelection = False
+        Me.工作表目录树.HotTracking = True
+        Me.工作表目录树.ImageIndex = 1
+        Me.工作表目录树.ImageList = Me.ImageList1
+        Me.工作表目录树.Location = New System.Drawing.Point(0, 23)
+        Me.工作表目录树.Name = "工作表目录树"
+        Me.工作表目录树.SelectedImageIndex = 3
+        Me.工作表目录树.ShowPlusMinus = False
+        Me.工作表目录树.Size = New System.Drawing.Size(295, 544)
+        Me.工作表目录树.StateImageList = Me.ImageList1
+        Me.工作表目录树.TabIndex = 0
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "00589.ico")
+        Me.ImageList1.Images.SetKeyName(1, "Chart32.ico")
+        Me.ImageList1.Images.SetKeyName(2, "Chart.ico")
+        Me.ImageList1.Images.SetKeyName(3, "options.png")
         '
         'ccd右
         '
@@ -104,7 +151,6 @@ Partial Class uc1
         Me.cdt右.Alignment = System.Windows.Forms.TabAlignment.Bottom
         Me.cdt右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.cdt右.CanAutoHide = True
-        Me.cdt右.CanCloseTabs = True
         Me.cdt右.CanMoveTabs = True
         Me.cdt右.HotTrack = True
         Me.cdt右.Location = New System.Drawing.Point(0, 0)
@@ -155,16 +201,13 @@ Partial Class uc1
         '
         'cdt主
         '
-        Me.cdt主.Animate = False
         Me.cdt主.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.cdt主.CanCloseTabs = True
         Me.cdt主.CloseBox = C1.Win.C1Command.CloseBoxPositionEnum.ActivePage
         Me.cdt主.HotTrack = True
         Me.cdt主.Location = New System.Drawing.Point(0, 0)
         Me.cdt主.Name = "cdt主"
-        Me.cdt主.ShowCaption = True
         Me.cdt主.ShowTabList = True
-        Me.cdt主.ShowTabs = False
-        Me.cdt主.ShowToolTips = True
         Me.cdt主.Size = New System.Drawing.Size(135, 293)
         Me.cdt主.TabAreaBorder = True
         Me.cdt主.TabIndex = 0
@@ -195,11 +238,20 @@ Partial Class uc1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cdt替)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(0, 0)
+        Me.Panel1.Size = New System.Drawing.Size(1, 1)
         Me.Panel1.TabIndex = 1
-        Me.Panel1.Visible = False
+        '
+        'cdt替
+        '
+        Me.cdt替.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cdt替.Location = New System.Drawing.Point(0, 0)
+        Me.cdt替.Name = "cdt替"
+        Me.cdt替.Size = New System.Drawing.Size(1, 1)
+        Me.cdt替.TabIndex = 0
+        Me.cdt替.TabsSpacing = 5
         '
         'uc1
         '
@@ -215,6 +267,8 @@ Partial Class uc1
         CType(Me.ccd左, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ccd左.ResumeLayout(False)
         CType(Me.cdt左, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.cdt左.ResumeLayout(False)
+        Me.工作表.ResumeLayout(False)
         CType(Me.ccd右, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ccd右.ResumeLayout(False)
         CType(Me.cdt右, System.ComponentModel.ISupportInitialize).EndInit()
@@ -225,6 +279,8 @@ Partial Class uc1
         CType(Me.ccd主, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ccd主.ResumeLayout(False)
         CType(Me.cdm, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.cdt替, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -238,4 +294,11 @@ Partial Class uc1
     Friend WithEvents cdt下 As C1.Win.C1Command.C1DockingTab
     Public WithEvents cdm As C1.Win.C1Command.C1DockingManager
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents 工作表 As C1.Win.C1Command.C1DockingTabPage
+    Friend WithEvents 工作表目录树 As TreeView
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents cdt替 As C1.Win.C1Command.C1DockingTab
+    'Friend WithEvents dd As new  Foxtable.WinForm.TabControl()
+    'Friend WithEvents cb As C1.Win.C1Input.C1Button
+    'Friend WithEvents t As Foxtable.WinForm.Table
 End Class

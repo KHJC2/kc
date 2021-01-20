@@ -13,6 +13,18 @@ Public Module 全局变量
     Friend _时差 As Double
     Private _时间监控最后执行时间 As Date
     Private _有更改的主表行 As New Dictionary(Of String, String)
+
+    Private _登录用户编号 As String
+    Private _登录人员编号 As String
+    Private _登录客户端编号 As String
+    Private _登录人员法律主体编号 As String
+    Private _当前法律主体编号 As String
+    Private _当前交易主体编号 As String
+    Private _当前群体编号 As String
+    Private _当前群体成员编号 As String
+    Private _当前企业编号 As String
+
+
     'Private _时间监控开始时间 As Date
     'Private _时间监控执行次数 As Integer
     'Private _时间监控总误差 As Double
@@ -134,6 +146,89 @@ Public Module 全局变量
             _有更改的主表行 = value
         End Set
     End Property
+
+    Public Property 登录用户编号 As String
+        Get
+            Return _登录用户编号
+        End Get
+        Set(value As String)
+            _登录用户编号 = value
+        End Set
+    End Property
+
+    Public Property 登录人员编号 As String
+        Get
+            Return _登录人员编号
+        End Get
+        Set(value As String)
+            _登录人员编号 = value
+        End Set
+    End Property
+
+    Public Property 登录客户端编号 As String
+        Get
+            Return _登录客户端编号
+        End Get
+        Set(value As String)
+            _登录客户端编号 = value
+        End Set
+    End Property
+
+    Public Property 登录人员法律主体编号 As String
+        Get
+            Return _登录人员法律主体编号
+        End Get
+        Set(value As String)
+            _登录人员法律主体编号 = value
+        End Set
+    End Property
+
+    Public Property 当前法律主体编号 As String
+        Get
+            Return _当前法律主体编号
+        End Get
+        Set(value As String)
+            _当前法律主体编号 = value
+        End Set
+    End Property
+
+    Public Property 当前交易主体编号 As String
+        Get
+            Return _当前交易主体编号
+        End Get
+        Set(value As String)
+            _当前交易主体编号 = value
+        End Set
+    End Property
+
+    Public Property 当前群体编号 As String
+        Get
+            Return _当前群体编号
+        End Get
+        Set(value As String)
+            _当前群体编号 = value
+        End Set
+    End Property
+
+    Public Property 当前群体成员编号 As String
+        Get
+            Return _当前群体成员编号
+        End Get
+        Set(value As String)
+            _当前群体成员编号 = value
+        End Set
+    End Property
+
+    Public Property 当前企业编号 As String
+        Get
+            Return _当前企业编号
+        End Get
+        Set(value As String)
+            _当前企业编号 = value
+        End Set
+    End Property
+
+
 
     'Public Property 时间监控开始时间 As Date
     '    Get

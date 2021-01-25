@@ -30,8 +30,8 @@ Public Module 全局表事件
     Public Sub DataColChanging()
 
     End Sub
-    Public Sub DataColChanged()
-
+    Public Sub DataColChanged(e As Foxtable.DataColEventArgs)
+        全局表事件实现.DataColChanged(e)
     End Sub
     Public Sub BeforeSaveDataRow()
 

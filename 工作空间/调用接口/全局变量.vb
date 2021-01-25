@@ -23,6 +23,8 @@ Public Module 全局变量
     Private _当前群体编号 As String
     Private _当前群体成员编号 As String
     Private _当前企业编号 As String
+    'Private ReadOnly _实际时间计数 As New Dictionary(Of Date, Integer)
+
 
 
     'Private _时间监控开始时间 As Date
@@ -52,6 +54,14 @@ Public Module 全局变量
 
     Public ReadOnly Property 实际时间 As Date
         Get
+            'Dim 时间 As Date = Date.Now.AddMilliseconds(时差)
+            'If 实际时间计数.ContainsKey(时间) Then
+            '    实际时间计数(时间) += 1
+            'Else
+            '    实际时间计数.Clear()
+            '    实际时间计数.Add(时间, 0)
+            'End If
+            'Return 时间
             Return Date.Now.AddMilliseconds(时差)
         End Get
     End Property
@@ -227,6 +237,12 @@ Public Module 全局变量
             _当前企业编号 = value
         End Set
     End Property
+
+    'Public ReadOnly Property 实际时间计数 As Dictionary(Of Date, Integer)
+    '    Get
+    '        Return _实际时间计数
+    '    End Get
+    'End Property
 
 
 

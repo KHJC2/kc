@@ -36,6 +36,15 @@ Friend Module 全局表事件实现
         Output.Show("</CurrentChanged_表-" & 当前表名 & ".行-" & 当前行id & ".旧行-" & 旧行id & ">")
     End Sub
 
+    Friend Sub DataColChanged(e As DataColEventArgs)
+
+        For Each table As Table In Tables
+            If table.DataTable Is e.DataTable Then
+                设置列(table.Cols(e.DataCol.Name))
+            End If
+        Next
+    End Sub
+
     Friend Sub BeforeDeleteDataRow()
         Throw New NotImplementedException()
     End Sub
@@ -73,21 +82,22 @@ Friend Module 全局表事件实现
     Friend Sub AfterLoad(e As LoadEventArgs)
         For Each table As Table In Tables
             If table.DataTable Is e.DataTable Then
-                For Each col As Col In table.Cols
-                    If col.Name.Split("_").Length = 3 Then
-                        col.DropForm = "dfm"
-                        'Dim dmp As New TableDataMap
-                        'dmp.DataTable = "客户" '指定数据来源表
-                        'dmp.ValueCol = "ID" '指定取值列
-                        'dmp.DisplayCol = "公司" '指定显示列
-                        ''指定下拉列表时显示哪些列的数据
-                        'dmp.ListCols = "ID,公司,姓氏,名字,职务,业务电话,传真号,地址,城市,邮政编码"
-                        'dmp.Sort = "城市" '指定排序方式
-                        'Tables("订单").Cols("客户 ID").DataMap = dmp.CreateDataMap() '生成并设置DataMap
+                设置表(table)
+                'For Each col As Col In table.Cols
+                '    If col.Name.Split("_").Length = 3 Then
+                '        col.DropForm = "dfm"
+                '        'Dim dmp As New TableDataMap
+                '        'dmp.DataTable = "客户" '指定数据来源表
+                '        'dmp.ValueCol = "ID" '指定取值列
+                '        'dmp.DisplayCol = "公司" '指定显示列
+                '        ''指定下拉列表时显示哪些列的数据
+                '        'dmp.ListCols = "ID,公司,姓氏,名字,职务,业务电话,传真号,地址,城市,邮政编码"
+                '        'dmp.Sort = "城市" '指定排序方式
+                '        'Tables("订单").Cols("客户 ID").DataMap = dmp.CreateDataMap() '生成并设置DataMap
 
-                        '.DataMap = 
-                    End If
-                Next
+                '        '.DataMap = 
+                '    End If
+                'Next
 
             End If
         Next
@@ -158,7 +168,7 @@ Friend Module 全局表事件实现
 
             Dim 条件字符串 As String
             If 主表当前行 IsNot Nothing Then
-                条件字符串 = 子表名.Remove(0, 2) & " = '" & 主表当前行(主表.Cols(0).Name) & "'"
+                条件字符串 = 子表名.Remove(0, 2) & " = '" & 主表当前行(主表.Name.Remove(0, 2) & "_编号") & "'"
             Else
                 条件字符串 = "1 = 0"
             End If

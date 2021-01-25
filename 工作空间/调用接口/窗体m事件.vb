@@ -20,6 +20,7 @@ Public Module 窗体m事件
         子表名列表排序()
         添加记录窗口(e)
         添加工作目录树节点(e)
+
         加载系统设置()
 
         Output.Show("</AfterLoad_form-" & e.Form.Name & ">")
@@ -79,7 +80,9 @@ Public Module 窗体m事件
 
     Private Sub 添加工作目录树节点(e As FormEventArgs)
         Dim 工作目录树 As Foxtable.WinForm.TreeView = e.Form.Controls("工作表目录树")
-        For Each 主表名 As String In 子表名列表.Keys
+        Dim toList As List(Of String) = 子表名列表.Keys.ToList
+        toList.Sort()
+        For Each 主表名 As String In toList
             Dim 主节点 As Foxtable.WinForm.TreeNode = 工作目录树.Nodes.Add(主表名, 主表名.Remove(0, 2))
             For Each 子表名 As String In 子表名列表(主表名)
                 主节点.Nodes.Add(子表名, 子表名.Remove(0, 2))
@@ -93,6 +96,7 @@ Public Module 窗体m事件
                 节点.SelectedIconFile = "options.png"
             End If
         Next
+        工作目录树.SelectedNode = 工作目录树.Nodes(0)
     End Sub
 
     Private Sub 添加记录窗口(e As FormEventArgs)

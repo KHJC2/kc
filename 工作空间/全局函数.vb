@@ -68,7 +68,8 @@ Friend Module 全局函数
                 设置数据列(数据列)
             Next
 
-
+            .GlobalHandler.AfterLoad = True
+            .GlobalHandler.DataColChanged = True
             .GlobalHandler.DataRowAdding = True
             .AllowDragColumn = False
             .AllowInitialize = False
@@ -87,6 +88,15 @@ Friend Module 全局函数
         With 数据列
             If .Name.Split("_").Length > 1 Then
                 .Caption = .Name.Split("_")(1)
+            End If
+            If .Name.EndsWith("_编号") Then
+                .AllowEdit = False
+            End If
+            If .Name.Split("_").Length = 3 AndAlso .DataTable.Name = "m_" & .Name Then
+                .AllowEdit = False
+            End If
+            If .Name.StartsWith("sys_") Then
+                .AllowEdit = False
             End If
             .AutoComplete = True
             If .IsDate Then
@@ -128,8 +138,8 @@ Friend Module 全局函数
 
     Friend Sub 设置表(表 As Table)
         With 表
-            .AutoSizeCols()
-            .AutoSizeRows()
+            '.AutoSizeCols()
+            '.AutoSizeRows()
             .ListMode = True
 
             '.AllowBackEndFilter = True '允许通过菜单筛选后台数据
@@ -161,16 +171,25 @@ Friend Module 全局函数
             '.ShortCaption = .Caption
             '.DropTree = Nothing
             '.ShowInRecordGrid = True
+            If .Name.Split("_").Length = 3 AndAlso .DataTable.Name = "m_" & .Name Then
+                .Visible = False
+                .ShowInRecordGrid = False
+            End If
             If .Name.StartsWith("sys_") Then
                 .Visible = False
-                '.ShowInRecordGrid = False
-            Else
-                .Visible = True
+                .ShowInRecordGrid = False
+                'Else
+                '    .Visible = True
             End If
+            If .Name.EndsWith("_编号") Then
+                .Visible = False
+                .ShowInRecordGrid = False
+            End If
+            .Table.AutoSizeCol(.Name)
             If .Width > 150 Then
                 .Width = 150
             End If
-            .UsetBuildInEditor = False '是否使用内置输入器
+            '.UsetBuildInEditor = True '是否使用内置输入器
             .CloseWindow()
             '.RecordRowHeight = 1
             '.ResetAutoCompleteSource() '未知情况

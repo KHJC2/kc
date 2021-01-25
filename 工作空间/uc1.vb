@@ -146,12 +146,14 @@ Public Class uc1
                     DataTables("m_" & 页.Name).LoadFilter = "1 = 1"
                     DataTables("m_" & 页.Name).LoadPage = DataTables("m_" & 页.Name).TotalPages - 1
                     DataTables("m_" & 页.Name).Load(False)
+
                 End If
                 If Tables.Contains("m_" & 页.Name) Then
                     If Not Tables("m_" & 页.Name).Focused Then
                         Tables("m_" & 页.Name).Focus()
                     End If
                 End If
+                cdt.ScrollToSelectedTab()
             End If
         End If
         'Dim ss(25) As Object
@@ -213,7 +215,6 @@ Public Class uc1
             If 子表.DataTable.HasChanges Then
                 e.Cancel = True
                 PopMessage("子表未保存修改", "请保存修改", PopiconEnum.Infomation, 2)
-
             End If
         End If
 lage:
